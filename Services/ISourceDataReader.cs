@@ -8,6 +8,6 @@ namespace ExcelToCsvETL.Services
 {
     public interface ISourceDataReader
     {
-        Task<Stream> ReadExcelFileFromWeb(Uri address, string fileName, CancellationToken cancellationToken = default);
+        Task<Stream> ReadExcelFileFromWebAsync(Uri address, string fileName, CancellationToken cancellationToken = default);
     }
 }

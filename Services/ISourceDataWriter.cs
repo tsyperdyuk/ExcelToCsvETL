@@ -9,6 +9,6 @@ namespace ExcelToCsvETL.Services
 {
     public interface ISourceDataWriter
     {        
-        Task CsvWriter(List<RigCount> data);       
+        Task CsvWriterAsync(List<RigCount> data);       
     }
 }

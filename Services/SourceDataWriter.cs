@@ -12,7 +12,7 @@ namespace ExcelToCsvETL.Services
 {
     public class SourceDataWriter : ISourceDataWriter
     {
-        public async Task CsvWriter(List<RigCount> data)
+        public async Task CsvWriterAsync(List<RigCount> data)
         {
             // TODO: maybe read from appsettings.json using IConfiguration or EtlConfig class
             using (var writer = new StreamWriter("d:\\output.csv"))

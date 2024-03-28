@@ -22,7 +22,7 @@ namespace ExcelToCsvETL.Services;
 
 public class SourceDataReader: ISourceDataReader
 {
-    public async Task<Stream> ReadExcelFileFromWeb(Uri address, string fileName, CancellationToken cancellationToken = default)
+    public async Task<Stream> ReadExcelFileFromWebAsync(Uri address, string fileName, CancellationToken cancellationToken = default)
     {
         var path = await GetFilePath(address, fileName, cancellationToken);
         if (string.IsNullOrEmpty(path)) { 

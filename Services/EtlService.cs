@@ -20,9 +20,9 @@ public class EtlService
     {
         try
         {
-            var excelFileStream = await _sourceDataReader.ReadExcelFileFromWeb(config.ExcelFileUri, config.FileName, cancellationToken);
+            var excelFileStream = await _sourceDataReader.ReadExcelFileFromWebAsync(config.ExcelFileUri, config.FileName, cancellationToken);
             var data = await _sourceParser.ReadExcelDataAsync(excelFileStream);
-            var result = _sourceWriter.CsvWriter(data);            
+            var result = _sourceWriter.CsvWriterAsync(data);            
         }
         catch (Exception ex)
         {
